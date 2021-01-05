@@ -6,6 +6,10 @@
         {% block stylesheets %}{% endblock %}
     </head>
     <body>
+        {% for datum in pagination %}
+            {{ datum }}<br>
+        {% endfor %}
+        {{ knp_pagination_render(pagination) }}
         {% block body %}{% endblock %}
         {% block javascripts %}{% endblock %}
     </body>
